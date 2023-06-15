@@ -1,5 +1,6 @@
 import screenMatch.model.Movie;
 import screenMatch.model.Serie;
+import screenmatch.calculos.CalculadoraTempo;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,6 +34,16 @@ public class Main {
         lost.setEpisodeTime(40);
         System.out.println("Tempo de série " + lost.getTime() + "minutos");
 
+        Movie newMovie = new Movie();
 
+        newMovie.setTitle("Space Jam");
+        newMovie.setYear(1996);
+        newMovie.setTime(100);
+
+        CalculadoraTempo calculadora = new CalculadoraTempo();
+        calculadora.inclui(myMovie);
+        calculadora.inclui(newMovie);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
     }
 }
