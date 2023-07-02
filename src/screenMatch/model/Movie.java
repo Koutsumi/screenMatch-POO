@@ -1,6 +1,8 @@
 package screenMatch.model;
 
-public class Movie extends Title{
+import screenmatch.calculos.Classivicavel;
+
+public class Movie extends Title implements Classivicavel {
 
     private String director;
 
@@ -12,4 +14,8 @@ public class Movie extends Title{
         this.director = director;
     }
 
+    @Override
+    public int getClassificacao() {
+        return (int) getScore() / 2;
+    }
 }
