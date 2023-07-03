@@ -18,4 +18,9 @@ public class Movie extends Title implements Classivicavel {
     public int getClassificacao() {
         return (int) getScore() / 2;
     }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getTitle() + "(" + this.getYear() + ")";
+    }
 }

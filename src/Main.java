@@ -4,6 +4,8 @@ import screenMatch.model.Serie;
 import screenmatch.calculos.CalculadoraTempo;
 import screenmatch.calculos.FiltroRecomendacao;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -56,5 +58,21 @@ public class Main {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacao(200);
         filtro.filtra(episodio);
+
+        var filmeDoPaulo = new Movie();
+        filmeDoPaulo.setTime(200);
+        filmeDoPaulo.setTitle("DogVille");
+        filmeDoPaulo.setYear(2003);
+        filmeDoPaulo.evaluation(10);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(filmeDoPaulo);
+        movieList.add(myMovie);
+        movieList.add(newMovie);
+
+        System.out.println("Tamanho da lista " + movieList.size());
+        System.out.println(movieList);
+        System.out.println("Primeiro filme " + movieList.get(0).getTitle());
+        System.out.println(movieList.get(0));
     }
 }
