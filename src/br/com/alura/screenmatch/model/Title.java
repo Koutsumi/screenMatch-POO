@@ -9,6 +9,11 @@ public class Title {
     private int totalScore;
     private int time;
 
+    public Title(String title, int year) {
+        this.title = title;
+        this.year = year;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }

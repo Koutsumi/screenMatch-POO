@@ -6,6 +6,10 @@ public class Movie extends Title implements Classivicavel {
 
     private String director;
 
+    public Movie(String title, int year){
+        super(title, year);
+    }
+
     public String getDirector() {
         return director;
     }

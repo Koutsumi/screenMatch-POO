@@ -1,11 +1,16 @@
 package screenMatch.model;
 
-public class Serie extends Movie{
+public class Serie extends Title{
 
     private int seasons;
     private boolean active;
     private int episodes;
     private int episodeTime;
+
+    public Serie(String title, int year) {
+        super(title, year);
+    }
+
 
     public int getSeasons() {
         return seasons;
