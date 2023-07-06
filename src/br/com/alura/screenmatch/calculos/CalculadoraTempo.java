@@ -1,5 +1,5 @@
-package screenmatch.calculos;
-import screenMatch.model.Title;
+package br.com.alura.screenmatch.calculos;
+import br.com.alura.screenmatch.model.Title;
 
 public class CalculadoraTempo {
 

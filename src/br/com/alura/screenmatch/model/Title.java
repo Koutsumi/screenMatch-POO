@@ -1,6 +1,6 @@
-package screenMatch.model;
+package br.com.alura.screenmatch.model;
 
-public class Title {
+public class Title implements Comparable<Title>{
     private String title;
     private String resume;
     private int year;
@@ -69,5 +69,10 @@ public class Title {
 
     public boolean isIncludePlan() {
         return includePlan;
+    }
+
+    @Override
+    public int compareTo(Title anotherTitle) {
+        return this.getTitle().compareTo(anotherTitle.getTitle());
     }
 }

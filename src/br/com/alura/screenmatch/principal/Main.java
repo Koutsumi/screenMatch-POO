@@ -1,11 +1,12 @@
-import screenMatch.model.Episodio;
-import screenMatch.model.Movie;
-import screenMatch.model.Serie;
-import screenmatch.calculos.CalculadoraTempo;
-import screenmatch.calculos.FiltroRecomendacao;
+package br.com.alura.screenmatch.principal;
+
+import br.com.alura.screenmatch.model.Episodio;
+import br.com.alura.screenmatch.model.Movie;
+import br.com.alura.screenmatch.model.Serie;
+import br.com.alura.screenmatch.calculos.CalculadoraTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package screenMatch.model;
+package br.com.alura.screenmatch.model;
 
-import screenmatch.calculos.Classivicavel;
+import br.com.alura.screenmatch.calculos.Classivicavel;
 
 public class Movie extends Title implements Classivicavel {
 
