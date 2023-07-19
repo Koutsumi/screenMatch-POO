@@ -4,8 +4,7 @@ import br.com.alura.screenmatch.model.Movie;
 import br.com.alura.screenmatch.model.Serie;
 import br.com.alura.screenmatch.model.Title;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -21,7 +20,7 @@ public class PrincipalComListas {
         Serie primeira_serie = new Serie("Pretty Little Liars", 2012);
         primeira_serie.evaluation(7);
 
-        ArrayList<Title> lista_assistidos = new ArrayList<>();
+        List<Title> lista_assistidos = new LinkedList<>();
         lista_assistidos.add(primeiro_filme);
         lista_assistidos.add(segundo_filme);
         lista_assistidos.add(terceiro_filme);
@@ -31,14 +30,12 @@ public class PrincipalComListas {
         // lista_assistidos.forEach(item -> System.out.println(item));
         Collections.sort(lista_assistidos);
         for(Title item: lista_assistidos){
-            System.out.println(item.getTitle());
+            System.out.println(item);
 
             if(item instanceof Movie movie){
                 System.out.println("Classicacao: " + movie.getClassificacao());
             }
         }
-
-
 
         ArrayList<String> buscaArtista = new ArrayList<>();
         buscaArtista.add("Adam Sandler");
@@ -48,6 +45,9 @@ public class PrincipalComListas {
         Collections.sort(buscaArtista);
         System.out.println("Depois de ordernar");
         System.out.println(buscaArtista);
+
+        lista_assistidos.sort(Comparator.comparing(Title::getYear));
+        System.out.println(lista_assistidos);
     }
 }
 

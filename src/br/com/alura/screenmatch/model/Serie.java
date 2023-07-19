@@ -48,4 +48,8 @@ public class Serie extends Title{
     public int getTime() {
         return seasons * episodes * episodeTime;
     }
+
+    public String toString() {
+        return "Série: " + this.getTitle() + "(" + this.getYear() + ")";
+    }
 }
