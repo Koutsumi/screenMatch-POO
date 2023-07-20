@@ -18,6 +18,12 @@ public class Title implements Comparable<Title>{
         this.year = year;
     }
 
+    public Title(TitleOmdb meuTituloOmdb) {
+        this.title = meuTituloOmdb.title();
+        this.year = Integer.parseInt(meuTituloOmdb.year());
+        this.time = Integer.parseInt(meuTituloOmdb.runtime().substring(0,3));
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -84,7 +90,7 @@ public class Title implements Comparable<Title>{
     public String toString() {
         return "Title{" +
                 "title='" + title + '\'' +
-                ", year=" + year +
+                ", year=" + year + '\'' + "time=" + time +
                 '}';
     }
 }
